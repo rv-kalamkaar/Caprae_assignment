@@ -1,8 +1,8 @@
 # backend/app.py
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
-from scraper import discover_links, extract_main_page_data
-from analyzer import generate_swot, find_leaders, detect_tech_stack
+from Backend.scraper import discover_links, extract_main_page_data
+from Backend.analyzer import generate_swot, find_leaders, detect_tech_stack
 
 app = Flask(__name__, template_folder="../frontend")
 CORS(app)  # Allow cross-origin requests if needed
