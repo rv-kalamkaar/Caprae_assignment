@@ -14,7 +14,8 @@ This is a Flask-based intelligent web scraping tool. It analyzes any company web
 
 Project Structure - 
 
-Caprae_assignment/
+Caprae_assignment
+
 ├── Backend/
 
     ├── app.py              # Flask backend server
