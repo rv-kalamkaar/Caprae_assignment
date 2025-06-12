@@ -17,13 +17,13 @@ Project Structure -
 Caprae_assignment/
 ├── Backend/
 
-│   ├── app.py              # Flask backend server
+    ├── app.py              # Flask backend server
 
-│   ├── scraper.py          # Selenium-based multi-page scraper
+    ├── scraper.py          # Selenium-based multi-page scraper
 
-│   ├── analyzer.py         # SWOT analysis engine
+    ├── analyzer.py         # SWOT analysis engine
 
-│   └── requirements.txt
+    └── requirements.txt
 
 └── frontend/
 
