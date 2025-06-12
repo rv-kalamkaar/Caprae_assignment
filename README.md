@@ -24,7 +24,6 @@ Caprae_assignment
 
     ├── analyzer.py         # SWOT analysis engine
 
-    └── requirements.txt
 
 └── frontend/
 
