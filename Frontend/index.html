@@ -2,38 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Caprae Insight Tool</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Company Intelligence Analyzer</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <div class="container">
-    <h1>Website Analyzer</h1>
-    <form id="analyze-form">
-      <input type="text" id="url" placeholder="Enter company URL" required />
-      <button type="submit">Analyze</button>
+    <h1>Company Intelligence Analyzer</h1>
+
+    <form id="analyzeForm">
+      <input type="url" id="urlInput" placeholder="Enter company website URL" required />
+      <button type="submit" id="submitBtn">Analyze</button>
     </form>
-    <div id="results" class="hidden">
-      <h2>Analysis Results</h2>
-      <div><strong>Discovered Links:</strong>
-        <ul id="links"></ul>
-      </div>
-      <div><strong>Leadership:</strong>
-        <ul id="leaders"></ul>
-      </div>
-      <div><strong>Technology Stack:</strong>
-        <ul id="tech"></ul>
-      </div>
-      <div><strong>SWOT Analysis:</strong>
-        <div class="swot">
-          <div><h3>Strengths</h3><ul id="swot-strengths"></ul></div>
-          <div><h3>Weaknesses</h3><ul id="swot-weaknesses"></ul></div>
-          <div><h3>Opportunities</h3><ul id="swot-opportunities"></ul></div>
-          <div><h3>Threats</h3><ul id="swot-threats"></ul></div>
+
+    <!-- Spinner -->
+    <div id="loading" class="hidden">
+      <div class="spinner"></div>
+      <p>Analyzing website... Please wait</p>
+    </div>
+
+    <!-- Results -->
+    <div id="result" class="hidden">
+      <h2>🔗 Discovered Links</h2>
+      <ul id="linksList"></ul>
+
+      <h2>📞 Key Contacts</h2>
+      <ul id="contactsList"></ul>
+
+      <h2>👤 Leadership</h2>
+      <ul id="leadersList"></ul>
+
+      <h2>📊 SWOT Analysis</h2>
+      <div class="swot-container">
+        <div>
+          <h3>Strengths</h3>
+          <ul id="swotStrengths"></ul>
+        </div>
+        <div>
+          <h3>Weaknesses</h3>
+          <ul id="swotWeaknesses"></ul>
+        </div>
+        <div>
+          <h3>Opportunities</h3>
+          <ul id="swotOpportunities"></ul>
+        </div>
+        <div>
+          <h3>Threats</h3>
+          <ul id="swotThreats"></ul>
         </div>
       </div>
+
+      <button id="downloadBtn" class="download-btn hidden">⬇️ Download CSV</button>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
